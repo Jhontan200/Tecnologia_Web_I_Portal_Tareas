@@ -1,4 +1,4 @@
-const BASE_URL = 'https://portal.upds.edu.bo/isaias/';
+const BASE_URL = 'https://jhontan200.github.io/';
 const REPO_URL = 'https://github.com/Jhontan200/';
 
 const PROJECTS = [
@@ -8,7 +8,7 @@ const PROJECTS = [
         status: "Completado",
         date: "02-12-2025",
         category: "Práctica 1",
-        pageUrl: `${BASE_URL}practica1-servidor-web`,
+        pageUrl: `${BASE_URL}Tecnologia_Web_I_Portal_Tareas/`,
         repoUrl: `${REPO_URL}Tecnologia_Web_I_Portal_Tareas`
     },
     {
