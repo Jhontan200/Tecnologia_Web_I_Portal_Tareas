@@ -17,7 +17,7 @@ const PROJECTS = [
         status: "Completado",
         date: "03-12-2025",
         category: "Práctica en Clase",
-        pageUrl: `${BASE_URL}Pracica_css/practica_css.html`,
+        pageUrl: `${BASE_URL}Tecnologia_Web_I_Portal_Tareas/Pracica_css/practica_css.html`,
         repoUrl: `${REPO_URL}Tecnologia_Web_I_Portal_Tareas/Pracica_css`
     },
     {
