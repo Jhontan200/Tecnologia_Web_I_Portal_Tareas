@@ -13,6 +13,15 @@ const PROJECTS = [
     },
     {
         id: 2,
+        title: "Práctica - CSS",
+        status: "Completado",
+        date: "03-12-2025",
+        category: "Práctica en Clase",
+        pageUrl: `${BASE_URL}Practica_css/practica_css.html`,
+        repoUrl: `${REPO_URL}Tecnologia_Web_I_Portal_Tareas`
+    },
+    {
+        id: 3,
         title: "Práctica JavaScript",
         status: "Pendiente",
         date: "10-12-2025",
@@ -21,7 +30,7 @@ const PROJECTS = [
         repoUrl: `${REPO_URL}`
     },
     {
-        id: 3,
+        id: 4,
         title: "Lenguaje de Intercambio JSON",
         status: "Pendiente",
         date: "17-12-2025",
