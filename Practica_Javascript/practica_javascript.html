@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Práctica Javascript - Laboratorio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body
+    class="bg-background text-slate-300 font-sans min-h-screen relative overflow-x-hidden selection:bg-blue-500/30 selection:text-blue-200">
+
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute top-[20%] right-[20%] w-[20%] h-[20%] bg-emerald-600/5 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24">
+
+        <header class="mb-20 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 backdrop-blur-md mb-8">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></span>
+                <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Sistema Activo</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
+                Práctica <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Javascript</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
+                Cada una de las siguientes tarjetas redirige a la solución interactiva de los ejercicios de
+                Javascript.
+            </p>
+        </header>
+
+        <nav class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+            <a class="group relative block h-80 rounded-[2rem] bg-surface border border-slate-800/60 overflow-hidden hover:border-orange-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(249,115,22,0.3)] hover:-translate-y-2"
+                href="ejercicio_1.html">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative h-full p-8 flex flex-col justify-between z-10">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-500 shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">thermostat</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-slate-600 group-hover:text-orange-400 transition-colors duration-300 text-2xl rotate-45 group-hover:rotate-0 transform">arrow_outward</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h2
+                            class="text-3xl font-display font-bold text-white group-hover:text-orange-100 transition-colors">
+                            Convertidor de<br>Temperatura</h2>
+                        <div
+                            class="w-12 h-1 bg-orange-500/30 rounded-full group-hover:w-full transition-all duration-700 ease-out">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500/20 blur-3xl rounded-full group-hover:bg-orange-500/30 transition-all duration-500">
+                </div>
+            </a>
+
+            <a class="group relative block h-80 rounded-[2rem] bg-surface border border-slate-800/60 overflow-hidden hover:border-pink-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(236,72,153,0.3)] hover:-translate-y-2"
+                href="ejercicio_2.html">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative h-full p-8 flex flex-col justify-between z-10">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-pink-400 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-500 shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">calculate</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-slate-600 group-hover:text-pink-400 transition-colors duration-300 text-2xl rotate-45 group-hover:rotate-0 transform">arrow_outward</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h2
+                            class="text-3xl font-display font-bold text-white group-hover:text-pink-100 transition-colors">
+                            Algoritmo<br>FizzBuzz</h2>
+                        <div
+                            class="w-12 h-1 bg-pink-500/30 rounded-full group-hover:w-full transition-all duration-700 ease-out">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-500/20 blur-3xl rounded-full group-hover:bg-pink-500/30 transition-all duration-500">
+                </div>
+            </a>
+
+            <a class="group relative block h-80 rounded-[2rem] bg-surface border border-slate-800/60 overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)] hover:-translate-y-2"
+                href="ejercicio_3.html">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative h-full p-8 flex flex-col justify-between z-10">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-500 shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">public</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-slate-600 group-hover:text-blue-400 transition-colors duration-300 text-2xl rotate-45 group-hover:rotate-0 transform">arrow_outward</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h2
+                            class="text-3xl font-display font-bold text-white group-hover:text-blue-100 transition-colors">
+                            Visualizador de<br>Fecha Actual</h2>
+                        <div
+                            class="w-12 h-1 bg-blue-500/30 rounded-full group-hover:w-full transition-all duration-700 ease-out">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500">
+                </div>
+            </a>
+
+            <a class="group relative block h-80 rounded-[2rem] bg-surface border border-slate-800/60 overflow-hidden hover:border-teal-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(20,184,166,0.3)] hover:-translate-y-2"
+                href="ejercicio_4.html">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative h-full p-8 flex flex-col justify-between z-10">
+                    <div class="flex justify-between items-start">
+                        <div
+                            class="p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-teal-400 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-500 shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">map</span>
+                        </div>
+                        <span
+                            class="material-symbols-outlined text-slate-600 group-hover:text-teal-400 transition-colors duration-300 text-2xl rotate-45 group-hover:rotate-0 transform">arrow_outward</span>
+                    </div>
+                    <div class="space-y-2">
+                        <h2
+                            class="text-3xl font-display font-bold text-white group-hover:text-teal-100 transition-colors">
+                            Lugar<br>Turístico</h2>
+                        <div
+                            class="w-12 h-1 bg-teal-500/30 rounded-full group-hover:w-full transition-all duration-700 ease-out">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-40 h-40 bg-teal-500/20 blur-3xl rounded-full group-hover:bg-teal-500/30 transition-all duration-500">
+                </div>
+            </a>
+
+            <a class="group relative block h-80 rounded-[2rem] bg-surface border border-slate-800/60 overflow-hidden hover:border-violet-500/50 transition-all duration-500 hover:shadow-[0_0_50px_-12px_rgba(139,92,246,0.3)] hover:-translate-y-2 lg:col-span-2"
+                href="ejercicio_5.html">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative h-full p-8 flex flex-col md:flex-row md:items-center justify-between z-10">
+                    <div class="flex flex-col justify-between h-full md:w-1/2">
+                        <div
+                            class="w-fit p-4 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-violet-400 group-hover:bg-violet-500 group-hover:text-white transition-colors duration-500 shadow-lg">
+                            <span class="material-symbols-outlined text-4xl">concierge</span>
+                        </div>
+                        <div class="space-y-2 mt-auto">
+                            <h2
+                                class="text-3xl md:text-4xl font-display font-bold text-white group-hover:text-violet-100 transition-colors">
+                                Gestión Hotelera</h2>
+                            <div
+                                class="w-12 h-1 bg-violet-500/30 rounded-full group-hover:w-full transition-all duration-700 ease-out">
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="hidden md:flex items-center justify-center w-1/2 h-full opacity-50 group-hover:opacity-80 transition-opacity duration-500">
+                        <span
+                            class="material-symbols-outlined text-[10rem] text-violet-500/20 group-hover:scale-110 transition-transform duration-700">apartment</span>
+                    </div>
+                    <span
+                        class="absolute top-8 right-8 material-symbols-outlined text-slate-600 group-hover:text-violet-400 transition-colors duration-300 text-2xl rotate-45 group-hover:rotate-0 transform">arrow_outward</span>
+                </div>
+                <div
+                    class="absolute -bottom-10 -right-10 w-64 h-64 bg-violet-500/20 blur-3xl rounded-full group-hover:bg-violet-500/30 transition-all duration-500">
+                </div>
+            </a>
+        </nav>
+
+        <footer
+            class="mt-20 py-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-slate-600 rounded-full"></span>
+                <p>© 2025 Isaias Jhonatan Recini Flores</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="hover:text-white transition-colors duration-300 relative group" href="https://github.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/tree/main/Practica_Javascript">
+                    Github
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

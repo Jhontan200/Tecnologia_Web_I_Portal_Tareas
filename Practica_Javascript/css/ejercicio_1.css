@@ -1,0 +1,366 @@
+:root {
+    --color-text-dark: #1e1e1e;
+    --color-text-light: #f9f9f9;
+    --color-bg-page: #f0f0f0;
+    --color-bg-card: #ffffff;
+    --color-input-border: #d0d0d0;
+    --color-button-dark: #1a1a1a;
+    --color-button-hover: #000000;
+    --color-input-focus: #5264AE;
+    --clima-frio-bg: #e1f5fe;
+    --clima-frio-text: #01579b;
+    --clima-templado-bg: #fffde7;
+    --clima-templado-text: #fbc02d;
+    --clima-calor-bg: #ffebee;
+    --clima-calor-text: #c62828;
+    --clima-extremo-bg: #eeeeee;
+    --clima-extremo-text: #424242;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.bg-page {
+    background-color: var(--color-bg-page);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    transition: background-color 0.5s ease;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #6a6a6a;
+    line-height: 1.4;
+    padding: 0 1rem;
+}
+
+.card-container {
+    background-color: var(--color-bg-card);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 450px;
+}
+
+.back-button {
+    display: flex;
+    height: 3em;
+    padding: 0 0.8rem;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--color-bg-card);
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    white-space: nowrap;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--color-bg-card);
+}
+
+.back-button>svg {
+    margin-right: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+    fill: var(--color-text-dark);
+}
+
+.back-button:hover>svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+.back-button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-input-border);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--color-button-dark);
+    box-shadow: 0 0 0 1px var(--color-button-dark);
+}
+
+.input-icon {
+    color: #888;
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.input-field {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    background: transparent;
+    /* Antes: -moz-appearance: textfield; */
+}
+
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button {
+    /* Antes: -webkit-appearance: none; */
+    margin: 0;
+}
+
+.action-button {
+    width: 100%;
+    height: 3.5em;
+    background-color: var(--color-button-dark);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.5s;
+    margin-bottom: 2rem;
+}
+
+.action-button:hover {
+    color: var(--color-button-dark);
+}
+
+.action-button::after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.action-button:hover::after {
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s;
+}
+
+.action-button:focus {
+    outline: 2px solid var(--color-button-dark);
+    outline-offset: 2px;
+}
+
+.result-label {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.result-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.result-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    display: inline-block;
+}
+
+.default-result {
+    background-color: #f5f5f5;
+    color: #888;
+}
+
+.clima-frio {
+    background-color: var(--clima-frio-bg);
+    color: var(--clima-frio-text);
+}
+
+.clima-templado {
+    background-color: var(--clima-templado-bg);
+    color: var(--clima-templado-text);
+}
+
+.clima-calor {
+    background-color: var(--clima-calor-bg);
+    color: var(--clima-calor-text);
+}
+
+.clima-extremo {
+    background-color: var(--clima-extremo-bg);
+    color: var(--clima-extremo-text);
+}
+
+.clima-error {
+    background-color: #fce4e4;
+    color: #c00;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.clima-frio .result-icon {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.clima-templado .result-icon {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+    }
+}
+
+.clima-calor .result-icon {
+    animation: glow 0.8s infinite alternate;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-3px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+.clima-extremo .result-icon {
+    animation: shake 0.4s 5 ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .bg-page {
+        padding-top: 5rem;
+    }
+}
+
+.fondo-frio {
+    background-color: #f0f8ff !important;
+}
+
+.fondo-templado {
+    background-color: #fff9e6 !important;
+}
+
+.fondo-calor {
+    background-color: #fff4f4 !important;
+}
+
+.fondo-extremo {
+    background-color: #fafafa !important;
+}
+
+.fondo-error {
+    background-color: #fff0f0 !important;
+}
+
+.default-bg {
+    background-color: var(--color-bg-page) !important;
+}

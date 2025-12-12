@@ -23,11 +23,11 @@ const PROJECTS = [
     {
         id: 3,
         title: "Práctica JavaScript",
-        status: "Pendiente",
-        date: "10-12-2025",
+        status: "Completado",
+        date: "12-12-2025",
         category: "Práctica 2",
-        pageUrl: `${BASE_URL}`,
-        repoUrl: `${REPO_URL}`
+        pageUrl: `${BASE_URL}Tecnologia_Web_I_Portal_Tareas/Practica_Javascript/practica_javascript.html`,
+        repoUrl: `${REPO_URL}Tecnologia_Web_I_Portal_Tareas/tree/main/Practica_Javascript`
     },
     {
         id: 4,

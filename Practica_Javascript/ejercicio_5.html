@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Habitaciones de Hotel</title>
+    <link rel="stylesheet" href="css/ejercicio_5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body class="bg-page">
+
+    <header class="header">
+        <a href="practica_javascript.html" class="back-button">
+            <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+                <path
+                    d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z">
+                </path>
+            </svg>
+            <span>Volver al Menú</span>
+        </a>
+
+        <div class="header-info-container">
+            <div class="hotel-info-text">
+                <span class="hotel-stars">★★★★★</span>
+                <div id="viewModeHeader">
+                    <h1 class="hotel-title" id="hotelNombre">Hotel Palacio de Sal</h1>
+                    <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> <span id="hotelCiudad">Uyuni,
+                            Bolivia</span></p>
+                </div>
+            </div>
+
+            <div class="edit-controls">
+                <button id="editarInfoBtn" class="action-button small-button primary-button"><i class="fas fa-edit"></i>
+                    Editar Información</button>
+            </div>
+        </div>
+
+        <div class="header-stats-wrapper">
+
+            <div class="availability-card">
+                <h2 class="card-title-availability">HABITACIONES DISPONIBLES</h2>
+                <div class="availability-row">
+                    <div class="availability-text">
+                        <span class="available-count" id="habitacionesDisponibles">8</span>
+                        <span class="total-count">/ <span id="totalHabitacionesDisplay">30</span></span>
+                    </div>
+                    <div class="available-icon-wrapper">
+                        <i class="fas fa-bed available-icon"></i>
+                    </div>
+                </div>
+                <p class="kpi-trend"><i class="fas fa-caret-up"></i> +12% vs ayer</p>
+            </div>
+
+            <div class="image-section">
+                <img src="imagenes/hotel.jpeg" alt="Hotel Palacio de Sal en el Salar de Uyuni" class="hotel-image">
+
+                <div class="image-overlay">
+                    <span class="image-caption">Construcción en Sal</span>
+                    <span class="image-subcaption">Salar de Uyuni</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content-grid">
+
+        <div class="reservation-card card-action">
+            <h2 class="card-title"><i class="fas fa-calendar-alt"></i> Reservar Habitaciones</h2>
+            <p class="card-description">Asignar nuevas habitaciones a clientes.</p>
+
+            <span class="input-label">Cantidad a reservar</span>
+            <div class="input-group">
+                <i class="fas fa-user-friends"></i>
+                <input type="number" id="cantidadReservar" placeholder="Ej. 1" min="1" value="1">
+            </div>
+            <button id="confirmarReservaBtn" class="action-button primary-button">
+                <i class="fas fa-check"></i> Confirmar Reserva
+            </button>
+            <div id="reservaMensaje" class="mensaje-oculto"></div>
+        </div>
+
+        <div class="release-card card-action">
+            <h2 class="card-title"><i class="fas fa-door-open"></i> Liberar Habitaciones</h2>
+            <p class="card-description">Marcar habitaciones como disponibles tras checkout.</p>
+
+            <span class="input-label">Cantidad a liberar</span>
+            <div class="input-group">
+                <i class="fas fa-bed"></i>
+                <input type="number" id="cantidadLiberar" placeholder="Ej. 1" min="1" value="1">
+            </div>
+            <button id="liberarHabitacionesBtn" class="action-button secondary-button">
+                <i class="fas fa-sign-out-alt"></i> Liberar Habitaciones
+            </button>
+            <div id="liberarMensaje" class="mensaje-oculto"></div>
+        </div>
+
+        <div class="info-hotel-card">
+            <h2 class="card-title-info"><i class="fas fa-info-circle"></i> Información del Hotel</h2>
+            <a href="#" id="infoCompletaLink" class="full-info-link">Ver reporte completo</a>
+
+            <div class="info-detail-row" id="infoDetailRow">
+            </div>
+        </div>
+
+    </main>
+
+    <div id="editModal" class="modal-overlay hidden-controls">
+        <div class="modal-content">
+            <h3 class="modal-title"><i class="fas fa-cog"></i> Editar Datos del Hotel</h3>
+            <span class="modal-close" id="closeModalBtn">&times;</span>
+
+            <form id="editHotelForm">
+
+                <div class="form-group">
+                    <label for="modalNombre">Nombre del Hotel:</label>
+                    <input type="text" id="modalNombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalCiudad">Ciudad:</label>
+                    <input type="text" id="modalCiudad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalTotalHabitaciones">Total de Habitaciones:</label>
+                    <input type="number" id="modalTotalHabitaciones" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalPersonalActivo">Personal Activo:</label>
+                    <input type="number" id="modalPersonalActivo" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalProximosCheckins">Próximos Check-ins (Hoy):</label>
+                    <input type="number" id="modalProximosCheckins" min="0" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="submit" id="guardarModalBtn" class="action-button primary-button"><i
+                            class="fas fa-save"></i> Guardar Cambios</button>
+                    <button type="button" id="cancelarModalBtn" class="action-button secondary-button"><i
+                            class="fas fa-times"></i> Cancelar</button>
+                </div>
+                <div id="modalMensaje" class="mensaje-oculto"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="reporteModal" class="modal-overlay hidden-controls">
+        <div class="modal-content reporte-content">
+            <h3 class="modal-title reporte-title"><i class="fas fa-chart-line"></i> Reporte Detallado del Hotel</h3>
+            <span class="modal-close" id="closeReporteModalBtn">&times;</span>
+
+            <div id="reporteOutput" class="reporte-output-styled">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ejercicio_5.js"></script>
+</body>
+
+</html>
