@@ -51,8 +51,8 @@
         }
     ],
     "Tarifas": {
-        "EntradaParque": "65.000 Ar",
-        "GuiaDia": "40.000 Ar+",
+        "EntradaParque": "$3500",
+        "GuiaDia": "$3000",
         "Nota": "Precios sujetos a cambios por MNP."
     },
     "Horarios": "6:30 AM - 4:30 PM",
