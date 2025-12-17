@@ -1,0 +1,58 @@
+{
+    "lugar": "Reserva Especial de Ankarana",
+    "alias": "La Fortaleza de Piedra",
+    "ubicacion": {
+        "provincia": "Antsiranana (Diego Suárez)",
+        "region": "Diana",
+        "pais": "Madagascar",
+        "clima": "Tropical seco"
+    },
+    "descripcion": "Un macizo de piedra caliza del Jurásico erosionado que crea un paisaje de agujas afiladas llamadas 'Tsingy'. El parque alberga una de las redes de cuevas más grandes de África y cañones cubiertos de selva tropical.",
+    "actividades": [
+        "Senderismo por los puentes colgantes sobre los Tsingy",
+        "Exploración de la Cueva de los Murciélagos",
+        "Observación de lémures coronados y lémures de Sanford",
+        "Visita a los cañones de 'Pertes de Rivières'",
+        "Espeleología en ríos subterráneos"
+    ],
+    "floraYFaunaDestacada": {
+        "especies": [
+            "Lémur de cola anillada",
+            "Fosa",
+            "Uroplatus (gecko satánico de cola de hoja)"
+        ],
+        "flora": [
+            "Árboles Pachypodium (pie de elefante)",
+            "Baobabs de Perrier"
+        ]
+    },
+    "gastronomiaSugerida": [
+        "Pescado al coco (estilo costero del norte)",
+        "Ravitoto (hojas de mandioca machacadas con cerdo)",
+        "Frutas exóticas como lichi y mango de la región Diana",
+        "Arroz rojo malgache (Vary gasy)"
+    ],
+    "precios": {
+        "entradaExtranjeros": 45000,
+        "entradaNacionales": 5000,
+        "tarifaGuiaObligatorio": "Varía según el circuito (aprox. 30.000 - 60.000 MGA)",
+        "moneda": "Ariary malgache (MGA)"
+    },
+    "horarios": {
+        "apertura": "07:00",
+        "cierre": "16:30",
+        "dias": "Lunes a Domingo",
+        "mejorEpoca": "De abril a noviembre (evitar temporada de lluvias por inundaciones en cuevas)"
+    },
+    "logistica": {
+        "dificultad": "Media-Alta (requiere buena condición física)",
+        "equipoRecomendado": [
+            "Calzado de montaña de suela dura",
+            "Linterna frontal",
+            "Mucha agua",
+            "Repelente"
+        ],
+        "acceso": "Accesible vía la RN6 desde Diego Suárez o Ambanja"
+    },
+    "importanciaCultural": "Las cuevas son sitios sagrados (Fady) para el pueblo Antakarana; se cree que albergan los espíritus de sus antepasados."
+}

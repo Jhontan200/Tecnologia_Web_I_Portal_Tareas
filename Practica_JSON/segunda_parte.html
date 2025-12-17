@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title id="page-title">Reserva Especial de Ankarana</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="css/segunda_parte.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-slate-200 font-display overflow-x-hidden antialiased selection:bg-primary selection:text-white">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root" id="top">
+        <header
+            class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e6e8eb] dark:border-b-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl px-6 lg:px-10 py-4 transition-all duration-300">
+            <a href="#top"
+                class="flex items-center gap-4 text-[#111418] dark:text-white hover:opacity-80 transition-opacity">
+                <div class="size-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary shadow-sm">
+                    <span class="material-symbols-outlined">forest</span>
+                </div>
+                <h2 id="header-title"
+                    class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-tight">Reserva de
+                    Ankarana</h2>
+            </a>
+            <div class="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                        href="#top">Inicio</a>
+                    <a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                        href="#overview">La Reserva</a>
+                    <a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                        href="#location">Ubicación</a>
+                    <a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                        href="#highlights">Maravillas</a>
+                    <a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors"
+                        href="#practical">Visita</a>
+                    <div class="h-6 w-px bg-slate-200 dark:bg-slate-700 mx-2"></div>
+                    <a href="practica_json.html"
+                        class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-bold hover:bg-primary hover:text-white transition-all duration-300 group">
+                        <span
+                            class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Menú Principal
+                    </a>
+                </nav>
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-primary transition-all">
+                    <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                </button>
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="flex items-center">
+                        <span class="material-symbols-outlined text-[#111418] dark:text-white text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-background-dark translate-x-full transition-transform duration-300 lg:hidden">
+            <div class="flex justify-end p-6">
+                <button id="close-menu"><span
+                        class="material-symbols-outlined text-4xl dark:text-white">close</span></button>
+            </div>
+            <nav class="flex flex-col items-center gap-8 pt-10">
+                <a class="text-2xl font-bold dark:text-white" href="#top">Inicio</a>
+                <a class="text-2xl font-bold dark:text-white" href="#overview">La Reserva</a>
+                <a class="text-2xl font-bold dark:text-white" href="#location">Ubicación</a>
+                <a class="text-2xl font-bold dark:text-white" href="#highlights">Maravillas</a>
+                <a class="text-2xl font-bold dark:text-white" href="#practical">Visita</a>
+                <a class="text-2xl font-bold text-primary pt-8 border-t border-slate-100 dark:border-slate-800 w-full text-center"
+                    href="practica_json.html">
+                    <span class="flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">arrow_back</span> Menú Principal
+                    </span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="@container w-full">
+                <div
+                    class="relative flex min-h-[90vh] flex-col gap-6 items-center justify-center p-4 lg:p-20 overflow-hidden group">
+                    <div id="hero-bg"
+                        class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20s] ease-in-out group-hover:scale-105">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-background-dark"></div>
+                    <div class="relative z-10 flex flex-col gap-8 text-center max-w-[900px] animate-slide-up">
+                        <span
+                            class="inline-flex items-center justify-center self-center rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur-md border border-white/20 shadow-xl">
+                            Norte de Madagascar: Tierra de los Tsingy
+                        </span>
+                        <h1 id="hero-title"
+                            class="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[1] tracking-tight text-shadow-lg">
+                            Explora Ankarana
+                        </h1>
+                        <p id="hero-description"
+                            class="text-white/90 text-lg md:text-xl font-medium leading-relaxed max-w-2xl mx-auto text-shadow">
+                            Descubre un paisaje laberíntico de agujas de piedra caliza y biodiversidad única.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+                        <section
+                            class="flex flex-col lg:flex-row gap-16 py-20 lg:py-28 border-b border-slate-200 dark:border-slate-800"
+                            id="overview">
+                            <div class="flex flex-col gap-8 flex-1 justify-center">
+                                <div
+                                    class="flex items-center gap-3 text-primary font-bold tracking-wider uppercase text-xs">
+                                    <span class="material-symbols-outlined text-lg">landscape</span>
+                                    <span>El Reino de Piedra</span>
+                                </div>
+                                <h2
+                                    class="text-[#111418] dark:text-white text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
+                                    Donde la roca se encuentra con la selva.</h2>
+                                <div id="overview-description"
+                                    class="flex flex-col gap-5 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                                </div>
+                                <div class="grid grid-cols-2 gap-6 mt-4">
+                                    <div
+                                        class="group p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <span class="material-symbols-outlined text-primary">area_chart</span>
+                                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500">
+                                                Extensión</div>
+                                        </div>
+                                        <div id="extension"
+                                            class="text-3xl font-black text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                                        </div>
+                                        <div class="text-xs text-slate-400 mt-1">hectáreas</div>
+                                    </div>
+                                    <div
+                                        class="group p-5 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <span class="material-symbols-outlined text-primary">explore</span>
+                                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Red
+                                                de Cuevas</div>
+                                        </div>
+                                        <div id="red-de-cuevas"
+                                            class="text-3xl font-black text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                                        </div>
+                                        <div class="text-xs text-slate-400 mt-1">kilómetros</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 relative">
+                                <div
+                                    class="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl group cursor-zoom-in rotate-2 hover:rotate-0 transition-all duration-500 border-4 border-white dark:border-slate-700">
+                                    <div id="tsingy-bg"
+                                        class="absolute inset-0 bg-cover bg-center scale-110 group-hover:scale-100 transition-transform duration-700">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60">
+                                    </div>
+                                    <div class="absolute bottom-6 left-6 text-white">
+                                        <p class="font-bold text-lg">Tsingy Grises</p>
+                                        <p class="text-sm opacity-80">Formaciones del Jurásico</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-3xl border-2 border-primary/20 dark:border-primary/20">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-20 border-b border-slate-200 dark:border-slate-800" id="location">
+                            <div class="flex flex-col gap-8">
+                                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">
+                                            Ubicación en el Norte</h2>
+                                        <p id="ubicacion" class="text-slate-600 dark:text-slate-400 text-lg"></p>
+                                    </div>
+                                    <div
+                                        class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-primary/10 text-primary font-bold border border-primary/20 hover:bg-primary/20 transition-colors cursor-pointer">
+                                        <span class="material-symbols-outlined">pin_drop</span>
+                                        <span id="coordenadas"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-full aspect-video lg:aspect-[21/9] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700 group">
+                                    <div id="map-bg"
+                                        class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent flex items-end p-6 md:p-8">
+                                        <div id="map-card-container"
+                                            class="bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm p-5 rounded-xl shadow-xl flex items-center gap-5 max-w-sm border border-slate-200 dark:border-slate-600 transform transition-transform duration-300 group-hover:-translate-y-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-20 border-b border-slate-200 dark:border-slate-800" id="highlights">
+                            <div class="flex flex-col gap-3 mb-12">
+                                <h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">Tesoros
+                                    Ocultos</h2>
+                                <p class="text-slate-600 dark:text-slate-400">¿Qué hace a Ankarana un lugar único en el
+                                    mundo?</p>
+                            </div>
+                            <div id="maravillas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                        </section>
+
+                        <section class="py-20 border-b border-slate-200 dark:border-slate-800">
+                            <div class="flex flex-col gap-16">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-2xl font-bold text-[#111418] dark:text-white">Aventuras y
+                                            Actividades</h3>
+                                        <span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span>
+                                    </div>
+                                    <div id="actividades" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-2xl font-bold text-[#111418] dark:text-white">Gastronomía de la
+                                            Región</h3>
+                                        <span class="h-px flex-1 bg-slate-200 dark:bg-slate-700"></span>
+                                    </div>
+                                    <div id="gastronomia" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="py-20" id="practical">
+                            <div class="flex items-center justify-between mb-10">
+                                <h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight">Información
+                                    Práctica</h2>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div
+                                    class="flex flex-col p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
+                                    <div
+                                        class="size-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">payments</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-[#111418] dark:text-white mb-4">Tarifas
+                                        (Estimadas)</h3>
+                                    <div id="tarifas" class="flex flex-col gap-3"></div>
+                                </div>
+                                <div
+                                    class="flex flex-col p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
+                                    <div
+                                        class="size-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">schedule</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-[#111418] dark:text-white mb-4">Horarios y Clima
+                                    </h3>
+                                    <div id="horarios-clima" class="flex flex-col gap-3"></div>
+                                </div>
+                                <div
+                                    class="flex flex-col p-6 rounded-2xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300">
+                                    <div
+                                        class="size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
+                                        <span class="material-symbols-outlined">backpack</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-[#111418] dark:text-white mb-4">Requisitos</h3>
+                                    <div id="requisitos" class="flex flex-col gap-3"></div>
+                                </div>
+                            </div>
+                            <div id="cultura-fady"
+                                class="mt-8 flex flex-col md:flex-row gap-6 items-center justify-between p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20">
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <footer
+                    class="border-t border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-background-dark py-12 px-10">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-[1200px] mx-auto">
+                        <div class="flex items-center gap-3">
+                            <div class="size-10 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined">forest</span>
+                            </div>
+                            <span id="footer-title"
+                                class="text-[#111418] dark:text-white font-bold text-xl tracking-tight">Ankarana</span>
+                        </div>
+                        <div id="footer" class="text-slate-400 dark:text-slate-500 text-sm"></div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="js/tailwind_config_02.js"></script>
+    <script src="js/segunda_parte.js"></script>
+</body>
+
+</html>

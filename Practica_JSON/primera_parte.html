@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Superhero Squad Roster</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/primera_parte.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 font-body min-h-screen transition-colors duration-300 halftone-pattern selection:bg-primary selection:text-white animate-bg-pan relative">
+
+    <div class="fixed top-4 left-4 z-[60]">
+        <a href="practica_json.html"
+            class="flex items-center justify-center bg-primary hover:bg-red-700 text-white border-2 border-black p-2 md:px-4 md:py-2 rounded-full md:rounded-lg shadow-comic dark:shadow-[4px_4px_0px_0px_#ffffff] transition-all duration-300 hover:-translate-y-1 active:translate-y-0 group"
+            title="Volver">
+            <span class="material-icons transform group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            <span class="font-display ml-2 hidden md:inline uppercase tracking-tighter">Menú Principal</span>
+        </a>
+    </div>
+
+    <nav class="w-full p-4 flex justify-end z-40">
+        <button
+            class="bg-white dark:bg-gray-800 border-2 border-black dark:border-white p-2 rounded-full shadow-comic dark:shadow-[4px_4px_0px_0px_#ffffff] hover:translate-y-[-2px] transition-transform"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-icons text-gray-800 dark:text-yellow-400">brightness_6</span>
+        </button>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-6xl pt-0 overflow-x-hidden">
+        <header class="text-center mb-12 md:mb-16 relative">
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-32 bg-comic-yellow -skew-x-12 opacity-80 dark:opacity-20 -z-10 blur-xl animate-pulse">
+            </div>
+            <h1 class="font-display text-5xl sm:text-6xl md:text-8xl tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-b from-primary to-red-800 drop-shadow-[4px_4px_0_rgba(0,0,0,1)] dark:drop-shadow-[4px_4px_0_#fff] mb-4 transform -skew-x-6 hover:scale-105 transition-transform duration-300 opacity-0 animate-pop-in"
+                id="squad-name">Superhero Squad</h1>
+            <div
+                class="inline-block bg-white dark:bg-gray-800 border-4 border-black dark:border-white px-4 md:px-6 py-2 md:py-3 shadow-comic dark:shadow-comic-dark transform rotate-1 hover:rotate-0 transition-transform duration-300 opacity-0 animate-slide-up-fade [animation-delay:600ms]">
+                <h2 class="font-display text-lg md:text-2xl tracking-wide">
+                    <span class="text-primary mr-1">Hometown:</span> <span id="squad-hometown">Metro City</span>
+                    <span class="mx-2 text-gray-400">//</span>
+                    <span class="text-primary mr-1">Formed:</span> <span id="squad-formed">2016</span>
+                </h2>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12" id="heroes-container"></main>
+
+        <footer class="mt-16 text-center opacity-0 animate-card-entrance [animation-delay:1500ms]">
+            <div
+                class="inline-block bg-black dark:bg-white text-white dark:text-black font-display text-lg px-8 py-2 transform skew-x-12 hover:skew-x-0 transition-transform duration-300">
+                <span class="transform -skew-x-12 inline-block">CLASSIFIED INFORMATION // DO NOT DISTRIBUTE</span>
+            </div>
+        </footer>
+    </div>
+
+    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out p-4"
+        id="modal-1" onclick="if(event.target === this) { closeModal(1); }">
+        <div
+            class="modal-panel w-full max-w-sm sm:max-w-4xl bg-white dark:bg-gray-800 border-[6px] border-black dark:border-white shadow-[16px_16px_0_0_#3B82F6] transform scale-90 transition-all duration-500 ease-out flex flex-col md:flex-row relative overflow-hidden max-h-[95vh] overflow-y-auto">
+            <button
+                class="absolute top-4 right-4 z-20 bg-primary text-white p-2 rounded-full border-2 border-black hover:scale-110 hover:rotate-90 transition-all duration-300 shadow-comic"
+                onclick="closeModal(1)">
+                <span class="material-icons text-2xl font-bold">close</span>
+            </button>
+            <div
+                class="w-full md:w-1/2 bg-comic-blue/20 dark:bg-comic-blue/10 flex items-center justify-center p-6 md:p-8 border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-gray-600 halftone-pattern relative">
+                <img id="modal-1-image" src="imagenes/heroe_1.png" alt="Hero image"
+                    class="h-48 md:h-full max-w-full object-contain drop-shadow-xl p-2 md:p-4 animate-molecule-drift">
+            </div>
+            <div class="w-full md:w-1/2 p-6 md:p-12 pt-16 md:pt-20 flex flex-col justify-center">
+                <h2 id="modal-1-title"
+                    class="font-display text-5xl md:text-7xl mb-4 leading-none text-black dark:text-white -skew-x-6 drop-shadow-md">
+                    Cargando...
+                </h2>
+                <div id="modal-1-role"
+                    class="bg-yellow-200 dark:bg-yellow-900 inline-block px-4 py-2 border-2 border-black dark:border-yellow-500 font-bold uppercase tracking-widest text-sm mb-6 md:mb-8 transform -rotate-1 self-start shadow-sm">
+                </div>
+                <div class="space-y-4 text-base md:text-xl">
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">fingerprint</span><span
+                            class="font-bold mr-2">Secret Identity:</span> <span id="modal-1-identity"></span></p>
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">cake</span><span class="font-bold mr-2">Age:</span>
+                        <span id="modal-1-age"></span>
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-8">
+                    <div class="flex items-center justify-between mb-4 border-b-4 border-black"
+                        id="modal-1-header-container">
+                        <h4 id="modal-1-powers-title" class="font-display text-xl md:text-2xl text-comic-blue">Full
+                            Power Set</h4>
+                    </div>
+                    <div id="modal-1-powers-container" class="relative">
+                        <ul id="modal-1-powers-list"
+                            class="grid grid-cols-1 gap-3 text-sm md:text-base transition-all duration-500 overflow-hidden">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out p-4"
+        id="modal-2" onclick="if(event.target === this) { closeModal(2); }">
+        <div
+            class="modal-panel w-full max-w-sm sm:max-w-4xl bg-white dark:bg-gray-800 border-[6px] border-black dark:border-white shadow-[16px_16px_0_0_#8B5CF6] transform scale-90 transition-all duration-500 ease-out flex flex-col md:flex-row relative overflow-hidden max-h-[95vh] overflow-y-auto">
+            <button
+                class="absolute top-4 right-4 z-20 bg-primary text-white p-2 rounded-full border-2 border-black hover:scale-110 hover:rotate-90 transition-all duration-300 shadow-comic"
+                onclick="closeModal(2)">
+                <span class="material-icons text-2xl font-bold">close</span>
+            </button>
+            <div
+                class="w-full md:w-1/2 bg-comic-purple/20 dark:bg-comic-purple/10 flex items-center justify-center p-6 md:p-8 border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-gray-600 halftone-pattern relative">
+                <img id="modal-2-image" src="imagenes/heroe_2.png" alt="Hero image"
+                    class="h-48 md:h-full max-w-full object-contain drop-shadow-xl p-2 md:p-4 animate-subtle-glow">
+            </div>
+            <div class="w-full md:w-1/2 p-6 md:p-12 pt-16 md:pt-20 flex flex-col justify-center">
+                <h2 id="modal-2-title"
+                    class="font-display text-5xl md:text-7xl mb-4 leading-none text-black dark:text-white -skew-x-6 drop-shadow-md">
+                    Cargando...
+                </h2>
+                <div id="modal-2-role"
+                    class="bg-yellow-200 dark:bg-yellow-900 inline-block px-4 py-2 border-2 border-black dark:border-yellow-500 font-bold uppercase tracking-widest text-sm mb-6 md:mb-8 transform -rotate-1 self-start shadow-sm">
+                </div>
+                <div class="space-y-4 text-base md:text-xl">
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">fingerprint</span><span
+                            class="font-bold mr-2">Secret Identity:</span> <span id="modal-2-identity"></span></p>
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">cake</span><span class="font-bold mr-2">Age:</span>
+                        <span id="modal-2-age"></span>
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-8">
+                    <div class="flex items-center justify-between mb-4 border-b-4 border-black"
+                        id="modal-2-header-container">
+                        <h4 id="modal-2-powers-title" class="font-display text-xl md:text-2xl text-comic-purple">Full
+                            Power Set</h4>
+                    </div>
+                    <div id="modal-2-powers-container" class="relative">
+                        <ul id="modal-2-powers-list"
+                            class="grid grid-cols-1 gap-3 text-sm md:text-base transition-all duration-500 overflow-hidden">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out p-4"
+        id="modal-3" onclick="if(event.target === this) { closeModal(3); }">
+        <div
+            class="modal-panel w-full max-w-sm sm:max-w-4xl bg-white dark:bg-gray-800 border-[6px] border-black dark:border-white shadow-[16px_16px_0_0_#EF4444] transform scale-90 transition-all duration-500 ease-out flex flex-col md:flex-row relative overflow-hidden max-h-[95vh] overflow-y-auto">
+            <button
+                class="absolute top-4 right-4 z-20 bg-primary text-white p-2 rounded-full border-2 border-black hover:scale-110 hover:rotate-90 transition-all duration-300 shadow-comic"
+                onclick="closeModal(3)">
+                <span class="material-icons text-2xl font-bold">close</span>
+            </button>
+            <div
+                class="w-full md:w-1/2 bg-primary/20 dark:bg-primary/10 flex items-center justify-center p-6 md:p-8 border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-gray-600 halftone-pattern relative">
+                <img id="modal-3-image" src="imagenes/heroe_3.png" alt="Hero image"
+                    class="h-48 md:h-full max-w-full object-contain drop-shadow-xl p-2 md:p-4 animate-flame-pulse">
+            </div>
+            <div class="w-full md:w-1/2 p-6 md:p-12 pt-16 md:pt-20 flex flex-col justify-center">
+                <h2 id="modal-3-title"
+                    class="font-display text-5xl md:text-7xl mb-4 leading-none text-black dark:text-white -skew-x-6 drop-shadow-md">
+                    Cargando...
+                </h2>
+                <div id="modal-3-role"
+                    class="bg-yellow-200 dark:bg-yellow-900 inline-block px-4 py-2 border-2 border-black dark:border-yellow-500 font-bold uppercase tracking-widest text-sm mb-6 md:mb-8 transform -rotate-1 self-start shadow-sm">
+                </div>
+                <div class="space-y-4 text-base md:text-xl">
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">fingerprint</span><span
+                            class="font-bold mr-2">Secret Identity:</span> <span id="modal-3-identity"></span></p>
+                    <p class="flex items-center border-b border-gray-300 pb-2"><span
+                            class="material-icons text-primary mr-3">cake</span><span class="font-bold mr-2">Age:</span>
+                        <span id="modal-3-age"></span>
+                    </p>
+                </div>
+                <div class="mt-6 md:mt-8">
+                    <div class="flex items-center justify-between mb-4 border-b-4 border-black"
+                        id="modal-3-header-container">
+                        <h4 id="modal-3-powers-title" class="font-display text-xl md:text-2xl text-primary">Full Power
+                            Set</h4>
+                    </div>
+                    <div id="modal-3-powers-container" class="relative">
+                        <ul id="modal-3-powers-list"
+                            class="grid grid-cols-1 gap-3 text-sm md:text-base transition-all duration-500 overflow-hidden">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/tailwind_config_01.js"></script>
+    <script src="js/primera_parte.js"></script>
+</body>
+
+</html>

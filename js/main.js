@@ -32,11 +32,11 @@ const PROJECTS = [
     {
         id: 4,
         title: "Lenguaje de Intercambio JSON",
-        status: "Pendiente",
+        status: "Completado",
         date: "17-12-2025",
         category: "Práctica 3",
-        pageUrl: `${BASE_URL}`,
-        repoUrl: `${REPO_URL}`
+        pageUrl: `${BASE_URL}Tecnologia_Web_I_Portal_Tareas/Practica_JSON/practica_json.html`,
+        repoUrl: `${REPO_URL}Tecnologia_Web_I_Portal_Tareas/tree/main/Practica_JSON`
     },
 ];
 
@@ -85,13 +85,11 @@ function initializeProjects() {
     setTimeout(() => {
         const realProjectHTML = PROJECTS.map((p, i) => {
             let statusClass;
-            // 1. Lógica de color de estado actualizada
             if (p.status === 'Completado') {
                 statusClass = 'text-green-400';
             } else if (p.status === 'En curso') {
                 statusClass = 'text-yellow-400 animate-pulse';
             } else if (p.status === 'Pendiente') {
-                // Estado Pendiente ahora usa el color secundario (rosa neón)
                 statusClass = 'text-secondary';
             } else {
                 statusClass = 'text-text-light/50';
