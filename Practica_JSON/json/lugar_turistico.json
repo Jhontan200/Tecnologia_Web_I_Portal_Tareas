@@ -40,13 +40,13 @@
         {
             "Titulo": "Jugo de Bouye",
             "Descripcion": "Bebida energética hecha del fruto del baobab, común en los mercados de Ambilobe.",
-            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Prueba_JSON/main/imagenes/bouye.jpg",
+            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/imagenes/bouye.jpg",
             "Alt": "Baobab fruit used in local juices"
         },
         {
             "Titulo": "Romazava Real",
             "Descripcion": "El plato nacional preparado con carne de cebú y hojas verdes 'brédes'.",
-            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Prueba_JSON/main/imagenes/romazava.jpg",
+            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/imagenes/romazava.jpg",
             "Alt": "Traditional Romazava stew"
         }
     ],
