@@ -1,58 +1,85 @@
 {
-    "lugar": "Reserva Especial de Ankarana",
-    "alias": "La Fortaleza de Piedra",
-    "ubicacion": {
-        "provincia": "Antsiranana (Diego Suárez)",
-        "region": "Diana",
-        "pais": "Madagascar",
-        "clima": "Tropical seco"
-    },
-    "descripcion": "Un macizo de piedra caliza del Jurásico erosionado que crea un paisaje de agujas afiladas llamadas 'Tsingy'. El parque alberga una de las redes de cuevas más grandes de África y cañones cubiertos de selva tropical.",
-    "actividades": [
-        "Senderismo por los puentes colgantes sobre los Tsingy",
-        "Exploración de la Cueva de los Murciélagos",
-        "Observación de lémures coronados y lémures de Sanford",
-        "Visita a los cañones de 'Pertes de Rivières'",
-        "Espeleología en ríos subterráneos"
+    "Lugar": "Reserva Especial de Ankarana",
+    "Ubicacion": "Región de Diana, Distrito de Ambilobe, Madagascar (12.9156° S, 49.0967° E)",
+    "Descripcion": "Explora un laberinto de piedra caliza afilada como cuchillos, bosques sagrados y la red de cuevas subterráneas más extensa de África. La Reserva Especial de Ankarana es una fortaleza natural de piedra caliza erosionada conocida como Tsingy. Estas formaciones kársticas afiladas crean un paisaje lunar impenetrable en la superficie. Bajo la roca, una vasta red de cuevas y ríos subterráneos alberga cocodrilos ciegos y murciélagos. En los cañones, los bosques caducifolios protegen una rica población de lémures coronados y de Sanford.",
+    "Extension": "18,220 hectáreas",
+    "RedDeCuevas": "120+ kilómetros",
+    "Maravillas": [
+        {
+            "Titulo": "Fauna Endémica",
+            "Descripcion": "Hogar de una de las mayores densidades de primates del mundo. Aquí conviven el Lémur Coronado, el Lémur de Sanford y el esquivo Aye-aye nocturno."
+        },
+        {
+            "Titulo": "Hidrología",
+            "Descripcion": "Ríos subterráneos que emergen misteriosamente."
+        },
+        {
+            "Titulo": "Geología",
+            "Descripcion": "Caliza de la era Jurásica (150m años)."
+        },
+        {
+            "Titulo": "Santuario Antakarana",
+            "Descripcion": "Las cuevas sirvieron de refugio histórico al pueblo Antakarana durante las guerras tribales del siglo XIX. Hoy son lugares sagrados donde se realizan ceremonias y ofrendas a los ancestros reales."
+        }
     ],
-    "floraYFaunaDestacada": {
-        "especies": [
-            "Lémur de cola anillada",
-            "Fosa",
-            "Uroplatus (gecko satánico de cola de hoja)"
-        ],
-        "flora": [
-            "Árboles Pachypodium (pie de elefante)",
-            "Baobabs de Perrier"
-        ]
-    },
-    "gastronomiaSugerida": [
-        "Pescado al coco (estilo costero del norte)",
-        "Ravitoto (hojas de mandioca machacadas con cerdo)",
-        "Frutas exóticas como lichi y mango de la región Diana",
-        "Arroz rojo malgache (Vary gasy)"
+    "Actividades": [
+        {
+            "Titulo": "Ruta de los Tsingy",
+            "Descripcion": "Camina sobre puentes colgantes entre pináculos de roca afilada."
+        },
+        {
+            "Titulo": "Espeleología",
+            "Descripcion": "Explora la 'Grotte des Chauves-souris' y sus estalactitas gigantes."
+        },
+        {
+            "Titulo": "Avistamiento de Lémures",
+            "Descripcion": "Encuentra especies diurnas y nocturnas en su hábitat natural."
+        }
     ],
-    "precios": {
-        "entradaExtranjeros": 45000,
-        "entradaNacionales": 5000,
-        "tarifaGuiaObligatorio": "Varía según el circuito (aprox. 30.000 - 60.000 MGA)",
-        "moneda": "Ariary malgache (MGA)"
+    "Gastronomia": [
+        {
+            "Titulo": "Jugo de Bouye",
+            "Descripcion": "Bebida energética hecha del fruto del baobab, común en los mercados de Ambilobe.",
+            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Prueba_JSON/main/imagenes/bouye.jpg",
+            "Alt": "Baobab fruit used in local juices"
+        },
+        {
+            "Titulo": "Romazava Real",
+            "Descripcion": "El plato nacional preparado con carne de cebú y hojas verdes 'brédes'.",
+            "Imagen": "https://raw.githubusercontent.com/Jhontan200/Prueba_JSON/main/imagenes/romazava.jpg",
+            "Alt": "Traditional Romazava stew"
+        }
+    ],
+    "Tarifas": {
+        "EntradaParque": "65.000 Ar",
+        "GuiaDia": "40.000 Ar+",
+        "Nota": "Precios sujetos a cambios por MNP."
     },
-    "horarios": {
-        "apertura": "07:00",
-        "cierre": "16:30",
-        "dias": "Lunes a Domingo",
-        "mejorEpoca": "De abril a noviembre (evitar temporada de lluvias por inundaciones en cuevas)"
-    },
-    "logistica": {
-        "dificultad": "Media-Alta (requiere buena condición física)",
-        "equipoRecomendado": [
-            "Calzado de montaña de suela dura",
-            "Linterna frontal",
-            "Mucha agua",
-            "Repelente"
-        ],
-        "acceso": "Accesible vía la RN6 desde Diego Suárez o Ambanja"
-    },
-    "importanciaCultural": "Las cuevas son sitios sagrados (Fady) para el pueblo Antakarana; se cree que albergan los espíritus de sus antepasados."
+    "Horarios": "6:30 AM - 4:30 PM",
+    "MejorEpoca": "Abril a Noviembre",
+    "NotaClima": "Evitar época de ciclones",
+    "Requisitos": [
+        "Guía Obligatorio",
+        "Calzado Robusto",
+        "Linterna Frontal"
+    ],
+    "CulturaFady": "Es vital respetar los tabúes locales: ciertas áreas de las cuevas son sagradas y está prohibido entrar con sombreros o comportarse irrespetuosamente.",
+    "Footer": "© 2025 Madagascar Reserva de Ankarana",
+    "Imagenes": [
+        {
+            "Descripcion": "Imagen principal (hero background)",
+            "URL": "https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/imagenes/Ankarana-National-Park.webp",
+            "Alt": "Paisaje de Ankarana"
+        },
+        {
+            "Descripcion": "Formaciones de Tsingy",
+            "URL": "https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/imagenes/tsingy.jpg",
+            "Alt": "Tsingy rock formations in Ankarana"
+        },
+        {
+            "Descripcion": "Mapa de la ubicación",
+            "URL": "https://lh3.googleusercontent.com/aida-public/AB6AXuCnx8DGbw8GS-1N2K-_gO_sA6BZtWKe_8JVTj7ueYNSysS4Cl2F4N7z0LFMvLaO5i4qBixLYVqVKsovu2kk7yfp3PVbaivcX91P_RDXjaVzugbESxmkYslUkIJT---uRrPwPTZeTRdh8UmmgnmwOBtiuiJT7MPRO1VGN2Hbclr5G8PrQdBCe8rcJAjcW1vl9ITDvOIISL_g48xeq_7rYN7TQmCBHImPiTZP3pEiequRbTx0UQJGgycfKKUZUA11lyImuq6YNyz9q9c",
+            "Alt": "Map showing the location of Ankarana Reserve"
+        }
+    ]
 }

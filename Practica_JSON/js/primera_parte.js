@@ -1,6 +1,6 @@
 let globalHeroesData = [];
 const powerIcons = ['bolt', 'compress', 'waves', 'fingerprint', 'fitness_center', 'shield', 'speed', 'all_inclusive', 'whatshot', 'public'];
-const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+const requestURL = 'https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/json/superheroes.json';
 const request = new XMLHttpRequest();
 
 request.open("GET", requestURL);

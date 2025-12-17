@@ -1,5 +1,5 @@
 function loadData() {
-    const requestURL = 'https://raw.githubusercontent.com/Jhontan200/Prueba_JSON/main/json/lugar_turistico.json';
+    const requestURL = 'https://raw.githubusercontent.com/Jhontan200/Tecnologia_Web_I_Portal_Tareas/main/Practica_JSON/json/lugar_turistico.json';
     const request = new XMLHttpRequest();
     request.open("GET", requestURL);
     request.responseType = "json";
